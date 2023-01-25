@@ -22,8 +22,8 @@ def classify_image(img):
   return dict(zip(categories, map(float, probs)))
 
 title = """
-  ## Er du i tvivl om at den øl du sidder med i hånden lige nu er god? 
-  Tvivl ej 68 års invotation inden for machine learning skal nok fortælle dig om øllen er god eller ej
+  # Er du i tvivl om at den øl du sidder med i hånden lige, nu er god?
+  ### Tvivl ej 68 års invotation inden for machine learning skal nok fortælle dig om øllen er god eller ej
 """
 image = gr.Image(shape=(192, 192))
 label = gr.Label()
@@ -34,7 +34,8 @@ iface = gr.Interface(
   inputs=image, 
   outputs=label, 
   examples=examples, 
-  description=title, 
+  description=title,
+  title="Er du i tvivl om at den øl du sidder med i hånden lige nu er god? "
 )
 
 iface.launch(inline=False)
