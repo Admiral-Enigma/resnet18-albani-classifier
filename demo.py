@@ -35,8 +35,6 @@ iface = gr.Interface(
   outputs=label, 
   examples=examples, 
   description=title, 
-  allow_flagging="manual", 
-  flagging_options=["wrong", "ambiguous"]
 )
 
 iface.launch(inline=False)
